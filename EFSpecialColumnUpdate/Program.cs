@@ -24,10 +24,11 @@ namespace EFSpecialColumnUpdate
             var entity = new Person()
             {
                 Id = 1,
-                Name = "Rashad_New_Value"
+                Name = "Rashad_New_Value",
+                Salary = 120
             };
 
-            db.UpdateSelectedValues(entity, x => x.Name);
+            db.UpdateSelectedValues(entity, x => x.Name, x => x.Salary);
             db.SaveChanges();
 
             Console.WriteLine("Operation has completed successfully!");
